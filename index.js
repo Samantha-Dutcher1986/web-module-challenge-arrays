@@ -42,8 +42,8 @@ To save you from having to count the items above, you can assume that length of 
 
 i.e. is31Flavors(originalFlavors) will return TRUE.*/
 
-function ArrayNum(originalFlavors){
-  if(originalFlavors.length === 31){
+function ArrayNum(originalFlavors) {
+  if (originalFlavors.length === 31) {
     console.log(True);
   }
 }
@@ -59,7 +59,7 @@ Your function should add the flavor to the front of the array and console.log th
 
 For example addFlavor("Rainbow Sherbert", originalFlavors) should return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla Burnt Almond"] */
 
-  /*code here*/
+/*code here*/
 originalFlavors.push("Rainbow Sherbert");
 console.log(originalFlavors);
 
@@ -157,17 +157,13 @@ and should return the average number of words per item in the array.
 For example, getAverageWordLength(originalFlavors) should return a number between 0 and 3. */
 
 let total = 4;
-for(let i = 0; i < array.length; i++){
-    total+=array[i].length;
-}
-let average = total/array.length;
 
 function getAverageWordLength(originalFlavors) {
-    for(let i=0, i < originalFlavors.length; i++){
-      total += originalFlavors[i].length;
-    }
+  for (let i = 0; i < originalFlavors.length; i++) {
+    total += originalFlavors[i].length;
+  }
 }
-let average = total/originalFlavors.length;
+let average = total / originalFlavors.length;
 console.log(getAverageWordLength);
 /* STRETCH 2: Baskin Robins now offers new flavors, seasonal flavors, and even regional flavors. Write a function that will randomly select a total of 31 flavors from originalFlavors, currentFlavors, seasonalFlavors, and regionalFlavors.
 
@@ -259,6 +255,6 @@ var regionalFlavors = [
 let items = [originalFlavors, newFlavors, seasonalFlavors, regionalFlavors];
 
 function getRandomFlavors(items) {
-  return items[Math.floor(Math.random()*items.length)];
+  return items[Math.floor(Math.random() * items.length)];
 }
 console.log(getRandomFlavors(items));
