@@ -1,35 +1,35 @@
 var originalFlavors = [
-  "Banana Nut Fudge",
-  "Black Walnut",
-  "Burgundy Cherry",
-  "Butterscotch Ribbon",
-  "Cherry Macaron",
+  "Banana" "Nut" "Fudge",
+  "Black" "Walnut",
+  "Burgundy" "Cherry",
+  "Butterscotch" "Ribbon",
+  "Cherry" "Macaroon",
   "Chocolate",
-  "Chocolate Almond",
-  "Chocolate Chip",
-  "Chocolate Fudge",
-  "Chocolate Mint",
-  "Chocolate Ribbon",
+  "Chocolate" "Almond",
+  "Chocolate" "Chip",
+  "Chocolate" "Fudge",
+  "Chocolate" "Mint",
+  "Chocolate" "Ribbon",
   "Coffee",
-  "Coffee Candy",
-  "Date Nut",
+  "Coffee" "Candy",
+  "Date" "Nut",
   "Eggnog",
-  "French Vanilla",
-  "Green Mint Stick",
-  "Lemon Crisp",
-  "Lemon Custard",
-  "Lemon Sherbet",
-  "Maple Nut",
-  "Orange Sherbet",
+  "French" "Vanilla",
+  "Green" "Mint" "Stick",
+  "Lemon" "Crisp",
+  "Lemon" "Custard",
+  "Lemon" "Sherbet",
+  "Maple" "Nut",
+  "Orange" "Sherbet",
   "Peach",
-  "Peppermint Fudge Ribbon",
-  "Peppermint Stick",
-  "Pineapple Sherbet",
-  "Raspberry Sherbet",
-  "Rocky Road",
+  "Peppermint" "Fudge" "Ribbon",
+  "Peppermint" "Stick",
+  "Pineapple" "Sherbet",
+  "Raspberry" "Sherbet",
+  "Rocky" "Road",
   "Strawberry",
   "Vanilla",
-  "Vanilla Burnt Almond",
+  "Vanilla" "Burnt" "Almond",
 ];
 
 /* Task 1: Confirm that the array is exactly 31 flavors. Your function should accept:
@@ -100,6 +100,15 @@ For example, removeFlavorByName(originalFlavors, "Vanilla") would return an arra
 Hint: You can use .splice() for this
 
 */
+// function removeFlavor(array, flavor){
+//   for(let i = 0; i < array.length; i++) {
+//     if (array[i] === flavor) {
+//       array.splice(i, i);
+//     }
+//   }
+// }
+// console.log(removeFlavor(originalFlavors, flavor));
+
 originalFlavors.splice(12, 1, "Coffee Candy");
 console.log(originalFlavors);
 
@@ -133,16 +142,17 @@ DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem.
 
 hint - you can use the .includes method to help you solve this */
 
-function filterByWord(array, string) {
-  let newArr = [];
-  for (let i = 0; i, arr.length; i++) {
-    if (arr[i].includes(string)) {
-      newArr.push(arr[i]);
+function filterByWord(originalFlavors, string) {
+  let string = "Chocolate";
+  let filterByWord = [];
+  for (let i = 0; i < originalFlavors.length; i++) {
+    if (originalFlavors[i].includes(string)) {
+      filterByWord.push(originalFlavors[i]);
     }
   }
-  return newArr;
+  return filterByWord;
 }
-console.log(filterByWord(originalFlavors, "Chocolate"));
+console.log(filterByWord(originalFlavors, string));
 
 /* 🧁🍦🍨 STRETCH 🍨🍦🍫*/
 
@@ -156,15 +166,16 @@ and should return the average number of words per item in the array.
 
 For example, getAverageWordLength(originalFlavors) should return a number between 0 and 3. */
 
-let total = 4;
+let total = 62;
 
 function getAverageWordLength(originalFlavors) {
+  let newFlavors = [];
   for (let i = 0; i < originalFlavors.length; i++) {
     total += originalFlavors[i].length;
   }
 }
 let average = total / originalFlavors.length;
-console.log(getAverageWordLength);
+console.log(newFlavors);
 /* STRETCH 2: Baskin Robins now offers new flavors, seasonal flavors, and even regional flavors. Write a function that will randomly select a total of 31 flavors from originalFlavors, currentFlavors, seasonalFlavors, and regionalFlavors.
 
 Your function should accept 4 different arrays,
